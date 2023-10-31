@@ -1,0 +1,48 @@
+/* style.css */
+
+/* Googleフォントの導入 */
+@import url(
+    'https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Ubuntu&family=Zen+Antique&family=Zen+Maru+Gothic:wght@500&display=swap'
+    );
+
+/* スタイル適用 */
+.container {
+    max-width: 1200px; /* コンテンツの最大幅を指定 */
+    margin: 0 auto; /* コンテンツを中央に配置 */
+    padding: 20px; /* コンテンツとページの余白を調整 */
+}
+
+body {
+    font-family: 'Hina Mincho'; /* Googleフォントを指定 */
+    margin: 0px;
+}
+
+h1, title {
+    color: blue;
+    font-size: 34pt;
+    margin: 3px;
+    font-family: 'Hina Mincho'; /* Googleフォントを指定 */
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 14pt;
+    margin: 1px;
+    font-family: 'Hina Mincho'; /* Googleフォントを指定 */
+}
+
+pre {
+    background-color: white;
+    font-size: 11pt;
+    padding: 12px;
+    font-family: 'Hina Mincho'; /* Googleフォントを指定 */
+}
+
+div.footer {
+    margin: 50px 0px;
+    font-size: 15pt;
+}

@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}データベース閲覧{% endblock %}
+
+{% block head %}Read Q&A History{% endblock %}
+
+{% block content %}
+    {% for chat in chats %}
+    <div>
+        <h3>{{ loop.index }}.  {{ chat[0] }}</h3>
+        <p>
+            Q : {{ chat[1][:120] }}{{ '........' if chat[1]|length > 120 else '' }}
+            <a href="{{ url_for('show_chat', index=loop.index0) }}">Details</a>
+        </p>
+        <!-- <h4> {{ '-' * 50 }} </h4> -->
+    </div>
+    {% endfor %}
+{% endblock %}
+
+{% block footer %}<a href="{{ url_for('index') }}">Back to Home</a>{% endblock %}
+

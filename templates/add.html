@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Chat App</title>
+</head>
+<body>
+    <h1>Chat History</h1>
+    <h2>Add New Chat</h2>
+    <form action="/preview" method="post" enctype="multipart/form-data">
+        <label>
+            Title: <br>
+            <textarea name="title" cols="55" rows="2">{{ preview_data['title'] if preview_data else '' }}</textarea>
+        </label>
+        <br>
+        <label>
+            My Question: <br>
+            <textarea name="my_question" cols="100" rows="17">{{ preview_data['my_question'] if preview_data else '' }}</textarea>
+        </label>
+        <br>
+        <label>
+            Teacher's Answer: <br>
+            <textarea name="teacher_answer" cols="100" rows="30">{{ preview_data['teacher_answer'] if preview_data else '' }}</textarea>
+        </label>
+        <br>
+        <button type="submit">Preview</button><br>
+        <!-- "Back to Home" ボタン -->
+        <a href="{{ url_for('index') }}">Back to Home</a>        
+    </form>
+</body>
+</html>
+

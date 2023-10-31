@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Chat App - Preview</title>
+</head>
+<body>
+    <h1>Chat Preview</h1>
+    <h2>Title:</h2>
+    <p>{{ preview_data['title'] }}</p>
+    <h2>My Question:</h2>
+    <p>{{ preview_data['my_question'] }}</p>
+    <h2>Teacher's Answer:</h2>
+    <p>{{ preview_data['teacher_answer'] }}</p>
+    <form action="/preview/submit" method="post">
+        <button type="submit">Submit</button>
+    </form>
+    <form action="/preview/edit" method="post">
+        <button type="submit">Edit</button>
+    </form>
+
+    <!-- "Back to Home" ボタン -->
+    <a href="{{ url_for('index') }}">Back to Home</a>   
+</body>
+</html>

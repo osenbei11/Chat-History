@@ -1,0 +1,39 @@
+{% extends "layout2.html" %}
+
+{% block title %}Q&A Detail{% endblock %}
+
+{% block head %} Read Q&A Detail {% endblock %}
+
+{% block h2 %} {{ chat[0] }} {% endblock %}
+
+{% block content %}
+<style>
+    .content {
+        font-size: 20px; /* 任意のフォントサイズに変更 */
+        white-space: pre-wrap; /* 単語内で改行を許可 */
+        word-wrap: break-word; /* 長い単語の折り返し */
+    }
+</style>
+
+<strong class="content">質問:</strong>
+<pre class="content">{{ chat[1] }}</pre>
+<br>
+<strong class="content">回答:</strong><br>
+<pre class="content">{{ chat[2] }}</pre>
+
+{% if prev_index is not none %}
+<a href="{{ url_for('show_chat', index=prev_index) }}"><p>Previous Question</p></a>
+{% endif %}
+
+{% if next_index is not none %}
+<a href="{{ url_for('show_chat', index=next_index) }}"><p>Next Question</p></a><br>
+    {% endif %}
+
+{% endblock %}
+
+{% block footer %}
+    <a href="{{ url_for('read_chats') }}">
+        Back to Q&A List</a>
+    <br><br>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+{% endblock %}
